@@ -10,7 +10,7 @@ def _bytes_feature(value):
 
 def load_image(address):
   #read an image and convert to 224,224
-  img=cv2.load_image(address)
+  img=cv2.imread(address)
   if img is None:
     return None
   img= cv2.resize(img ,(224,224),interpolation=cv2.INTER_CUBIC)
